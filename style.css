@@ -1,18 +1,43 @@
 body {
-  font-family: Arial;
-  background: #f2f2f2;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #1e3c72;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-box input {
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
   padding: 20px;
 }
 
-input {
-  padding: 8px;
-  width: 200px;
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-button {
-  padding: 8px;
-}
-
-h3 {
-  color: darkblue;
+.card h3 {
+  margin-top: 0;
+  color: #1e3c72;
 }
