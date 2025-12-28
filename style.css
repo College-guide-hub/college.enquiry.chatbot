@@ -1,18 +1,29 @@
-body {
-  font-family: Arial;
-  background: #f2f2f2;
-  padding: 20px;
-}
+function sendMessage(){
+  let input = document.getElementById("userInput");
+  let msg = input.value.trim();
+  if(msg === "") return;
 
-input {
-  padding: 8px;
-  width: 200px;
-}
+  let messages = document.getElementById("messages");
 
-button {
-  padding: 8px;
-}
+  messages.innerHTML += `
+    <div class="user"><span>${msg}</span></div>
+  `;
 
-h3 {
-  color: darkblue;
-}
+  let reply = "Please contact college office for more details.";
+
+  if(msg.toLowerCase().includes("admission"))
+    reply = "Admissions are open. Please check eligibility criteria.";
+  else if(msg.toLowerCase().includes("fees"))
+    reply = "Fees depend on the course. Which course are you interested in?";
+  else if(msg.toLowerCase().includes("course"))
+    reply = "We offer Engineering, Diploma and Degree courses.";
+
+  setTimeout(()=>{
+    messages.innerHTML += `
+      <div class="bot"><span>${reply}</span></div>
+    `;
+    messages.scrollTop = messages.scrollHeight;
+  },500);
+
+  input.value="";
+  }
