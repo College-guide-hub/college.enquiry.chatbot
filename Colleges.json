@@ -1,0 +1,16 @@
+[
+  {
+    "name": "RV College of Engineering",
+    "city": "Bangalore",
+    "courses": "BE, MTech",
+    "fees": "₹2,50,000 per year",
+    "contact": "080-67178000"
+  },
+  {
+    "name": "BMS College of Engineering",
+    "city": "Bangalore",
+    "courses": "BE, MCA",
+    "fees": "₹2,00,000 per year",
+    "contact": "080-26614357"
+  }
+]
