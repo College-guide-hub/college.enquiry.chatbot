@@ -1,48 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Karnataka College Enquiry Chatbot</title>
-  <style>
-    body { font-family: Arial; padding: 20px; }
-    input { padding: 8px; width: 260px; }
-    button { padding: 8px; }
-    .result { margin-top: 20px; }
-  </style>
+  <title>College Enquiry Chatbot</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h2>🎓 Karnataka College Enquiry Chatbot</h2>
+<div class="chatbox">
+  <div class="header">🎓 College Enquiry Chatbot</div>
 
-<input type="text" id="query" placeholder="Enter college name or course">
-<button onclick="searchCollege()">Search</button>
+  <div class="welcome">
+    👋 Welcome ! <br>
+    How can i help you?😊
+  </div>
 
-<div class="result" id="result"></div>
+  <div class="messages" id="messages"></div>
 
-<script>
-async function searchCollege() {
-  const input = document.getElementById("query").value.toLowerCase();
-  const resultDiv = document.getElementById("result");
-  resultDiv.innerHTML = "Searching...";
+  <input type="text" id="userInput" placeholder="Type your question here..."
+         onkeydown="if(event.key==='Enter') sendMessage()">
+</div>
 
-  const response = await fetch("Colleges.json");
-  const data = await response.json();
-
-  let output = "";
-
-  data.colleges.forEach(college => {
-    if (college.name.toLowerCase().includes(input)) {
-      output += `<h3>${college.name}</h3>
-                 <p>City: ${college.city}</p>`;
-      college.courses.forEach(course => {
-        output += `<p><b>${course.course}</b> – Branches: ${course.branches.join(", ")} – Fees: ₹${course.fees_per_year}/year</p>`;
-      });
-    }
-  });
-
-  resultDiv.innerHTML = output || "❌ No matching college found";
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
