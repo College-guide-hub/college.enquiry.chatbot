@@ -3,20 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>College Enquiry Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>🎓 Welcome to College Guide Hub</h1>
-    <p>Find engineering colleges easily</p>
-  </header>
+  <div class="chat-container">
 
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Search college by name or city...">
+    <div class="chat-header">
+      🎓 College Enquiry Chatbot
+    </div>
+
+    <div id="chatBox" class="chat-box">
+      <div class="bot">
+        Hello 👋<br><br>
+        You can ask me about:<br>
+        • College fees (KCET / COMEDK / Management)<br>
+        • Hostel availability<br>
+        • Location (city)<br>
+        • Courses offered<br><br>
+        Example:<br>
+        <i>RV college fees</i><br>
+        <i>KCET fees PES</i><br>
+        <i>MSRIT hostel</i>
+      </div>
+    </div>
+
+    <div class="input-box">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Type your question here..."
+        onkeydown="if(event.key==='Enter'){sendMessage()}"
+      >
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
   </div>
-
-  <div id="collegeList" class="cards"></div>
 
   <script src="script.js"></script>
 </body>
