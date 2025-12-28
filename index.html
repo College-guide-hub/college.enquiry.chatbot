@@ -1,83 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Karnataka College Enquiry Chatbot</title>
+  <title>College Enquiry Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(135deg, #eef2f3, #d9e4f5);
-  margin: 0;
-}
+    body {
+      font-family: Arial;
+      background: #f2f5f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-.container {
-  max-width: 700px;
-  margin: 60px auto;
-  background: white;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
+    .box {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      padding: 20px;
+      border-radius: 10px;
+    }
 
-h2 {
-  text-align: center;
-}
+    input {
+      width: 70%;
+      padding: 10px;
+    }
 
-input {
-  width: 70%;
-  padding: 12px;
-}
+    button {
+      padding: 10px;
+    }
 
-button {
-  padding: 12px;
-  background: #2d89ef;
-  color: white;
-  border: none;
-  border-radius: 6px;
-}
+    .chat {
+      margin-top: 15px;
+    }
 
-.result {
-  margin-top: 20px;
-}
+    .user {
+      text-align: right;
+      color: white;
+      background: #007bff;
+      padding: 8px;
+      border-radius: 8px;
+      margin: 5px;
+    }
+
+    .bot {
+      text-align: left;
+      background: #eee;
+      padding: 8px;
+      border-radius: 8px;
+      margin: 5px;
+    }
   </style>
 </head>
-<body class="fade-in">
-  <div class="container">
 
-<h2>🎓 Karnataka College Enquiry Chatbot</h2>
+<body>
 
-<input type="text" id="query" placeholder="Enter college name or course">
-<button onclick="searchCollege()">Search</button>
+<div class="box">
 
-<div class="result" id="result"></div>
-    </div>
-</body>
+  <h3>College Enquiry Chatbot</h3>
 
-<script>
-async function searchCollege() {
-  const input = document.getElementById("query").value.toLowerCase();
-  const resultDiv = document.getElementById("result");
-  resultDiv.innerHTML = "Searching...";
+  <input id="query" placeholder="Type college name">
+  <button onclick="searchCollege()">Send</button>
 
-  const response = await fetch("Colleges.json");
-  const data = await response.json();
+  <div id="chat" class="chat"></div>
 
-  let output = "";
+</div>
 
-  data.colleges.forEach(college => {
-    if (college.name.toLowerCase().includes(input)) {
-      output += `<h3>${college.name}</h3>
-                 <p>City: ${college.city}</p>`;
-      college.courses.forEach(course => {
-        output += `<p><b>${course.course}</b> – Branches: ${course.branches.join(", ")} – Fees: ₹${course.fees_per_year}/year</p>`;
-      });
-    }
-  });
-
-  resultDiv.innerHTML = output || "❌ No matching college found";
-}
-</script>
+<script src="script.js"></script>
 
 </body>
-  </html>
-  
+</html>
