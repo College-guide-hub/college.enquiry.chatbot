@@ -1,16 +1,166 @@
-[
-  {
-    "name": "RV College of Engineering",
-    "city": "Bangalore",
-    "courses": "BE, MTech",
-    "fees": "₹2,50,000 per year",
-    "contact": "080-67178000"
-  },
-  {
-    "name": "BMS College of Engineering",
-    "city": "Bangalore",
-    "courses": "BE, MCA",
-    "fees": "₹2,00,000 per year",
-    "contact": "080-26614357"
-  }
-]
+
+{
+  "colleges": [
+    {
+      "name": "RV College of Engineering",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ISE","ECE","EEE","ME","CE"], "fees_per_year": 250000 }
+      ]
+    },
+    {
+      "name": "BMS College of Engineering",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","EEE","ME","CE"], "fees_per_year": 225000 }
+      ]
+    },
+    {
+      "name": "MS Ramaiah Institute of Technology",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","EEE","ME","CE"], "fees_per_year": 230000 }
+      ]
+    },
+    {
+      "name": "PES University",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 240000 }
+      ]
+    },
+    {
+      "name": "Dayananda Sagar College of Engineering",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","EEE","ME"], "fees_per_year": 200000 }
+      ]
+    },
+    {
+      "name": "JSS Academy of Technical Education",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 160000 }
+      ]
+    },
+    {
+      "name": "CMR Institute of Technology",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","EEE"], "fees_per_year": 170000 }
+      ]
+    },
+    {
+      "name": "New Horizon College of Engineering",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 180000 }
+      ]
+    },
+    {
+      "name": "Reva University",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","EEE","ME"], "fees_per_year": 190000 }
+      ]
+    },
+    {
+      "name": "Acharya Institute of Technology",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 150000 }
+      ]
+    },
+
+    {
+      "name": "NITK Surathkal",
+      "city": "Mangaluru",
+      "type": "Government",
+      "courses": [
+        { "course": "BTech", "branches": ["CSE","ECE","EEE","ME","CE"], "fees_per_year": 150000 }
+      ]
+    },
+    {
+      "name": "SJCE – JSS Science and Technology University",
+      "city": "Mysuru",
+      "type": "Government",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME","CE"], "fees_per_year": 90000 }
+      ]
+    },
+    {
+      "name": "Malnad College of Engineering",
+      "city": "Hassan",
+      "type": "Government",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME","CE"], "fees_per_year": 85000 }
+      ]
+    },
+    {
+      "name": "Basaveshwar Engineering College",
+      "city": "Bagalkot",
+      "type": "Government",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME","CE"], "fees_per_year": 80000 }
+      ]
+    },
+    {
+      "name": "SDM College of Engineering and Technology",
+      "city": "Dharwad",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 120000 }
+      ]
+    },
+    {
+      "name": "KLE Technological University",
+      "city": "Hubballi",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 140000 }
+      ]
+    },
+    {
+      "name": "Bapuji Institute of Engineering",
+      "city": "Davangere",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 130000 }
+      ]
+    },
+    {
+      "name": "AIT Chikkamagaluru",
+      "city": "Chikkamagaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE"], "fees_per_year": 110000 }
+      ]
+    },
+    {
+      "name": "KVG College of Engineering",
+      "city": "Sullia",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 100000 }
+      ]
+    },
+    {
+      "name": "Sahyadri College of Engineering",
+      "city": "Mangaluru",
+      "type": "Private",
+      "courses": [
+        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 125000 }
+      ]
+    }
+  ]
+        }
