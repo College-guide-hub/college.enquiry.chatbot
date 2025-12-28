@@ -2,27 +2,25 @@ let colleges = [];
 
 fetch("Colleges.json")
   .then(res => res.json())
-  .then(data => colleges = data);
+  .then(data => {
+    colleges = data.colleges;
+  });
 
 function searchCollege() {
-  let query = document.getElementById("search").value.toLowerCase();
+  let query = document.getElementById("query").value.toLowerCase();
   let output = "";
 
   colleges.forEach(college => {
-    if (
-      college.city.toLowerCase().includes(query) ||
-      college.courses.join(" ").toLowerCase().includes(query)
-    ) {
+    if (college.name.toLowerCase().includes(query)) {
       output += `
         <h3>${college.name}</h3>
         <p>City: ${college.city}</p>
-        <p>Courses: ${college.courses.join(", ")}</p>
-        <p>Fees: ${college.fees}</p>
+        <p>Type: ${college.type}</p>
         <hr>
       `;
     }
   });
 
   document.getElementById("result").innerHTML =
-    output || "No college found";
+    output || "❌ No college found";
 }
