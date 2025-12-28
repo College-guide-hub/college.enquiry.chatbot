@@ -1,32 +1,34 @@
-let colleges = [];
+let allColleges = [];
 
 fetch("Colleges.json")
   .then(res => res.json())
   .then(data => {
-    colleges = data.colleges;
+    allColleges = data.colleges;
+    displayColleges(allColleges);
   });
 
-function searchCollege() {
-  const query = document.getElementById("search").value.toLowerCase();
-  let output = "";
+function displayColleges(colleges) {
+  const list = document.getElementById("collegeList");
+  list.innerHTML = "";
 
   colleges.forEach(college => {
-    if (college.name.toLowerCase().includes(query)) {
-      output += `
-        <h3>${college.name}</h3>
-        <p><b>City:</b> ${college.city}</p>
-        <p><b>Type:</b> ${college.type}</p>
-        <p><b>Courses:</b></p>
-        <ul>
-          ${college.courses.map(c =>
-            `<li>${c.course} - ₹${c.fees_per_year}/year</li>`
-          ).join("")}
-        </ul>
-        <hr>
-      `;
-    }
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <h3>${college.name}</h3>
+      <p><b>City:</b> ${college.city}</p>
+      <p><b>Type:</b> ${college.type}</p>
+      <p><b>Hostel:</b> ${college.hostel}</p>
+    `;
+    list.appendChild(div);
   });
-
-  document.getElementById("result").innerHTML =
-    output || "❌ No college found";
 }
+
+document.getElementById("search").addEventListener("input", e => {
+  const value = e.target.value.toLowerCase();
+  const filtered = allColleges.filter(c =>
+    c.name.toLowerCase().includes(value) ||
+    c.city.toLowerCase().includes(value)
+  );
+  displayColleges(filtered);
+});
