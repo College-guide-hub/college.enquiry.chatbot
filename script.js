@@ -1,22 +1,23 @@
 let collegesData = [];
 
 fetch("Colleges.json")
-  .then(res => res.json())
+  .then(response => response.json())
   .then(data => {
     collegesData = data.colleges;
   })
-  .catch(err => console.log(err));
+  .catch(error => console.log(error));
 
 function sendMessage() {
   const input = document.getElementById("userInput");
-  const userText = input.value.trim();
-  if (userText === "") return;
+  const userMessage = input.value.trim();
+  if (userMessage === "") return;
 
-  addMessage(userText, "user");
+  addMessage(userMessage, "user");
   input.value = "";
 
-  const msg = userText.toLowerCase();
-  let reply = "Sorry 😕 mujhe samajh nahi aaya. Fees, hostel, location ya courses ke baare me puchiye.";
+  const msg = userMessage.toLowerCase();
+  let reply =
+    "Sorry, I couldn't understand your question. Please ask about fees, hostel, location, or courses.";
 
   collegesData.forEach(college => {
     const shortName = college.name.toLowerCase().split(" ")[0];
@@ -24,44 +25,62 @@ function sendMessage() {
     if (msg.includes(shortName)) {
 
       // ALL FEES
-      if (msg.includes("fees") && !msg.includes("kcet") && !msg.includes("comedk") && !msg.includes("management")) {
+      if (
+        msg.includes("fees") &&
+        !msg.includes("kcet") &&
+        !msg.includes("comedk") &&
+        !msg.includes("management")
+      ) {
         reply = `
 <b>${college.name}</b><br>
 KCET Fees: ₹${college.fees.KCET}<br>
 COMEDK Fees: ₹${college.fees.COMEDK}<br>
-Management Fees: ₹${college.fees.Management}
+Management Quota Fees: ₹${college.fees.Management}
         `;
       }
 
-      // KCET
+      // KCET FEES
       if (msg.includes("kcet")) {
-        reply = `${college.name} ki KCET fees ₹${college.fees.KCET} hai.`;
+        reply = `${college.name} KCET fees is ₹${college.fees.KCET}.`;
       }
 
-      // COMEDK
+      // COMEDK FEES
       if (msg.includes("comedk")) {
-        reply = `${college.name} ki COMEDK fees ₹${college.fees.COMEDK} hai.`;
+        reply = `${college.name} COMEDK fees is ₹${college.fees.COMEDK}.`;
       }
 
-      // MANAGEMENT
+      // MANAGEMENT FEES
       if (msg.includes("management")) {
-        reply = `${college.name} ki Management quota fees ₹${college.fees.Management} hai.`;
+        reply = `${college.name} Management quota fees is ₹${college.fees.Management}.`;
       }
 
       // HOSTEL
       if (msg.includes("hostel")) {
-        reply = `${college.name} me hostel facility: ${college.hostel}`;
+        reply = `${college.name} hostel facility: ${college.hostel}.`;
       }
 
       // LOCATION
       if (msg.includes("location") || msg.includes("city")) {
-        reply = `${college.name} ${college.city} me located hai.`;
+        reply = `${college.name} is located in ${college.city}.`;
       }
 
       // COURSES
       if (msg.includes("course")) {
         const courses = college.courses.map(c => c.course).join(", ");
-        reply = `${college.name} me available courses: ${courses}`;
+        reply = `${college.name} offers the following courses: ${courses}.`;
+      }
+
+      // FULL DETAILS
+      if (msg.includes("details")) {
+        reply = `
+<b>${college.name}</b><br>
+📍 Location: ${college.city}<br>
+🏨 Hostel: ${college.hostel}<br><br>
+<b>Fees:</b><br>
+KCET: ₹${college.fees.KCET}<br>
+COMEDK: ₹${college.fees.COMEDK}<br>
+Management: ₹${college.fees.Management}
+        `;
       }
     }
   });
@@ -76,4 +95,4 @@ function addMessage(text, type) {
   div.innerHTML = text;
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
-                   }
+                          }
