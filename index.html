@@ -1,74 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>College Enquiry Chatbot</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Karnataka College Enquiry Chatbot</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      background: #f2f5f9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
+<link rel="stylesheet" href="style.css">
 
-    .box {
-      background: white;
-      width: 90%;
-      max-width: 500px;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    input {
-      width: 70%;
-      padding: 10px;
-    }
-
-    button {
-      padding: 10px;
-    }
-
-    .chat {
-      margin-top: 15px;
-    }
-
-    .user {
-      text-align: right;
-      color: white;
-      background: #007bff;
-      padding: 8px;
-      border-radius: 8px;
-      margin: 5px;
-    }
-
-    .bot {
-      text-align: left;
-      background: #eee;
-      padding: 8px;
-      border-radius: 8px;
-      margin: 5px;
-    }
-  </style>
 </head>
-
 <body>
 
-<div class="box">
+<div class="container">
+  <h2>🎓 Karnataka College Enquiry Chatbot</h2>
 
-  <h3>College Enquiry Chatbot</h3>
+  <input type="text" id="search" placeholder="Enter college name or city">
+  <button onclick="searchCollege()">Search</button>
 
-  <input id="query" placeholder="Type college name">
-  <button onclick="searchCollege()">Send</button>
-
-  <div id="chat" class="chat"></div>
-
+  <div id="result"></div>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
