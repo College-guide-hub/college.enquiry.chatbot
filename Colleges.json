@@ -1,166 +1,228 @@
-
 {
   "colleges": [
     {
       "name": "RV College of Engineering",
       "city": "Bengaluru",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ISE","ECE","EEE","ME","CE"], "fees_per_year": 250000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 250000 }],
+      "fees": { "KCET": 100000, "COMEDK": 250000, "Management": 350000 },
+      "hostel": "Available"
     },
     {
       "name": "BMS College of Engineering",
       "city": "Bengaluru",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","EEE","ME","CE"], "fees_per_year": 225000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 225000 }],
+      "fees": { "KCET": 95000, "COMEDK": 230000, "Management": 320000 },
+      "hostel": "Available"
     },
     {
       "name": "MS Ramaiah Institute of Technology",
       "city": "Bengaluru",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","EEE","ME","CE"], "fees_per_year": 230000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 230000 }],
+      "fees": { "KCET": 100000, "COMEDK": 240000, "Management": 330000 },
+      "hostel": "Available"
     },
     {
       "name": "PES University",
       "city": "Bengaluru",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 240000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 240000 }],
+      "fees": { "KCET": 120000, "COMEDK": 260000, "Management": 360000 },
+      "hostel": "Available"
     },
     {
       "name": "Dayananda Sagar College of Engineering",
       "city": "Bengaluru",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","EEE","ME"], "fees_per_year": 200000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 200000 }],
+      "fees": { "KCET": 90000, "COMEDK": 210000, "Management": 300000 },
+      "hostel": "Available"
     },
     {
-      "name": "JSS Academy of Technical Education",
-      "city": "Bengaluru",
+      "name": "MYCEM College of Engineering & Technology",
+      "city": "Mandya",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 160000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 160000 }],
+      "fees": { "KCET": 85000, "COMEDK": 180000, "Management": 260000 },
+      "hostel": "Available"
     },
-    {
-      "name": "CMR Institute of Technology",
-      "city": "Bengaluru",
-      "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","EEE"], "fees_per_year": 170000 }
-      ]
-    },
-    {
-      "name": "New Horizon College of Engineering",
-      "city": "Bengaluru",
-      "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 180000 }
-      ]
-    },
-    {
-      "name": "Reva University",
-      "city": "Bengaluru",
-      "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","EEE","ME"], "fees_per_year": 190000 }
-      ]
-    },
-    {
-      "name": "Acharya Institute of Technology",
-      "city": "Bengaluru",
-      "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 150000 }
-      ]
-    },
-
     {
       "name": "NITK Surathkal",
       "city": "Mangaluru",
       "type": "Government",
-      "courses": [
-        { "course": "BTech", "branches": ["CSE","ECE","EEE","ME","CE"], "fees_per_year": 150000 }
-      ]
+      "courses": [{ "course": "BTech", "fees_per_year": 150000 }],
+      "fees": { "KCET": "NA", "COMEDK": "NA", "Management": "NA" },
+      "hostel": "Available (Mandatory)"
     },
     {
-      "name": "SJCE – JSS Science and Technology University",
+      "name": "SJCE Mysuru (JSS STU)",
       "city": "Mysuru",
       "type": "Government",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME","CE"], "fees_per_year": 90000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 90000 }],
+      "fees": { "KCET": 90000, "COMEDK": 160000, "Management": 250000 },
+      "hostel": "Available"
     },
     {
       "name": "Malnad College of Engineering",
       "city": "Hassan",
       "type": "Government",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME","CE"], "fees_per_year": 85000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 85000 }],
+      "fees": { "KCET": 85000, "COMEDK": 150000, "Management": 230000 },
+      "hostel": "Available"
     },
     {
       "name": "Basaveshwar Engineering College",
       "city": "Bagalkot",
       "type": "Government",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME","CE"], "fees_per_year": 80000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 80000 }],
+      "fees": { "KCET": 80000, "COMEDK": 140000, "Management": 220000 },
+      "hostel": "Available"
     },
     {
-      "name": "SDM College of Engineering and Technology",
+      "name": "UVCE Bengaluru",
+      "city": "Bengaluru",
+      "type": "Government",
+      "courses": [{ "course": "BE", "fees_per_year": 70000 }],
+      "fees": { "KCET": 70000, "COMEDK": 130000, "Management": 200000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "SDM College of Engineering",
       "city": "Dharwad",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 120000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 120000 }],
+      "fees": { "KCET": 80000, "COMEDK": 170000, "Management": 250000 },
+      "hostel": "Available"
     },
     {
       "name": "KLE Technological University",
       "city": "Hubballi",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 140000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 140000 }],
+      "fees": { "KCET": 90000, "COMEDK": 180000, "Management": 260000 },
+      "hostel": "Available"
     },
     {
       "name": "Bapuji Institute of Engineering",
       "city": "Davangere",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 130000 }
-      ]
-    },
-    {
-      "name": "AIT Chikkamagaluru",
-      "city": "Chikkamagaluru",
-      "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE"], "fees_per_year": 110000 }
-      ]
-    },
-    {
-      "name": "KVG College of Engineering",
-      "city": "Sullia",
-      "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 100000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 130000 }],
+      "fees": { "KCET": 85000, "COMEDK": 160000, "Management": 240000 },
+      "hostel": "Available"
     },
     {
       "name": "Sahyadri College of Engineering",
       "city": "Mangaluru",
       "type": "Private",
-      "courses": [
-        { "course": "BE", "branches": ["CSE","ECE","ME"], "fees_per_year": 125000 }
-      ]
+      "courses": [{ "course": "BE", "fees_per_year": 125000 }],
+      "fees": { "KCET": 85000, "COMEDK": 165000, "Management": 245000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "AIT Chikkamagaluru",
+      "city": "Chikkamagaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 110000 }],
+      "fees": { "KCET": 80000, "COMEDK": 150000, "Management": 220000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "JSS Academy of Technical Education",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 160000 }],
+      "fees": { "KCET": 85000, "COMEDK": 190000, "Management": 270000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "CMR Institute of Technology",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 170000 }],
+      "fees": { "KCET": 90000, "COMEDK": 200000, "Management": 280000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "New Horizon College of Engineering",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 180000 }],
+      "fees": { "KCET": 95000, "COMEDK": 210000, "Management": 290000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "Reva University",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 190000 }],
+      "fees": { "KCET": 100000, "COMEDK": 220000, "Management": 300000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "Acharya Institute of Technology",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 150000 }],
+      "fees": { "KCET": 85000, "COMEDK": 180000, "Management": 260000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "Global Academy of Technology",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 140000 }],
+      "fees": { "KCET": 85000, "COMEDK": 175000, "Management": 250000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "BNM Institute of Technology",
+      "city": "Bengaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 155000 }],
+      "fees": { "KCET": 90000, "COMEDK": 185000, "Management": 270000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "Vidyavardhaka College of Engineering",
+      "city": "Mysuru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 135000 }],
+      "fees": { "KCET": 85000, "COMEDK": 170000, "Management": 240000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "Sri Jayachamarajendra College of Engineering",
+      "city": "Mysuru",
+      "type": "Government",
+      "courses": [{ "course": "BE", "fees_per_year": 90000 }],
+      "fees": { "KCET": 90000, "COMEDK": 160000, "Management": 250000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "Canara Engineering College",
+      "city": "Mangaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 120000 }],
+      "fees": { "KCET": 80000, "COMEDK": 160000, "Management": 230000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "St Joseph Engineering College",
+      "city": "Mangaluru",
+      "type": "Private",
+      "courses": [{ "course": "BE", "fees_per_year": 125000 }],
+      "fees": { "KCET": 85000, "COMEDK": 165000, "Management": 240000 },
+      "hostel": "Available"
+    },
+    {
+      "name": "Dr Ambedkar Institute of Technology",
+      "city": "Bengaluru",
+      "type": "Government",
+      "courses": [{ "course": "BE", "fees_per_year": 80000 }],
+      "fees": { "KCET": 80000, "COMEDK": 150000, "Management": 220000 },
+      "hostel": "Available"
     }
   ]
-        }
+    }
