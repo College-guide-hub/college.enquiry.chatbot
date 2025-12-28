@@ -1,6 +1,6 @@
 let colleges = [];
 
-fetch("Colleges.json")
+fetch("./Colleges.json")
   .then(res => res.json())
   .then(data => colleges = data);
 
