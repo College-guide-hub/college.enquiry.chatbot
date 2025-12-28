@@ -1,26 +1,33 @@
 let colleges = [];
 
 fetch("Colleges.json")
-  .then(res => res.json())
-  .then(data => {
-    colleges = data.colleges;
-  });
+  .then(r => r.json())
+  .then(d => colleges = d.colleges);
 
 function searchCollege() {
-  let query = document.getElementById("query").value.toLowerCase();
-  let output = "";
+  let text = document.getElementById("query").value.toLowerCase();
+  let chat = document.getElementById("chat");
 
-  colleges.forEach(college => {
-    if (college.name.toLowerCase().includes(query)) {
-      output += `
-        <h3>${college.name}</h3>
-        <p>City: ${college.city}</p>
-        <p>Type: ${college.type}</p>
-        <hr>
-      `;
+  if (text === "") return;
+
+  chat.innerHTML += `<div class="user">${text}</div>`;
+
+  let found = false;
+
+  colleges.forEach(c => {
+    if (c.name.toLowerCase().includes(text)) {
+      found = true;
+      chat.innerHTML += `<div class="bot">
+        <b>${c.name}</b><br>
+        City: ${c.city}<br>
+        Type: ${c.type}
+      </div>`;
     }
   });
 
-  document.getElementById("result").innerHTML =
-    output || "❌ No college found";
+  if (!found) {
+    chat.innerHTML += `<div class="bot">College not found</div>`;
+  }
+
+  document.getElementById("query").value = "";
 }
