@@ -42,7 +42,7 @@
     },
     {
       "name": "MYCEM College of Engineering & Technology",
-      "city": "Mandya",
+      "city": "Mysore",
       "type": "Private",
       "courses": [{ "course": "BE", "fees_per_year": 160000 }],
       "fees": { "KCET": 85000, "COMEDK": 180000, "Management": 260000 },
