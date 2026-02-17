@@ -29,10 +29,9 @@ if (college) {
   let reply =
     "Sorry, I couldn't understand your question. Please ask about fees, hostel, location, or courses.";
 
-  collegesData.forEach(college => {
-    const shortName = college.name.toLowerCase().split(" ")[0];
+  const college = findCollegeByName(msg, collegesData);
 
-    if (msg.includes(shortName)) {
+if (college) {
 
       // ALL FEES
       if (
@@ -93,7 +92,7 @@ Management: ₹${college.fees.Management}
         `;
       }
     }
-  });
+          }
 
   setTimeout(() => addMessage(reply, "bot"), 400);
 }
