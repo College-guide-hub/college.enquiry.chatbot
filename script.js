@@ -96,3 +96,37 @@ function addMessage(text, type) {
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
                           }
+function quickAsk(text){
+
+  // Input box me text dalega
+  document.getElementById("userInput").value = text;
+
+  // Chat me user message show karega
+  let chatBox = document.getElementById("chatBox");
+
+  chatBox.innerHTML += `
+    <div class="user">${text}</div>
+  `;
+
+  let reply = "";
+
+  // Reply Logic
+  if(text.includes("top colleges")){
+    reply = "Top Colleges:<br>• RV College<br>• BMS College<br>• MS Ramaiah<br>• PES University";
+  }
+  else if(text.includes("courses")){
+    reply = "Available Courses:<br>• BE<br>• BTech";
+  }
+  else if(text.includes("admission")){
+    reply = "Admission Help:<br>• KCET<br>• COMEDK<br>• Management Quota";
+  }
+
+  // Bot reply show karega
+  setTimeout(()=>{
+    chatBox.innerHTML += `
+      <div class="bot">${reply}</div>
+    `;
+    chatBox.scrollTop = chatBox.scrollHeight;
+  },500);
+
+}
