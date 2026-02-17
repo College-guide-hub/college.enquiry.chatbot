@@ -11,7 +11,9 @@ function sendMessage() {
   function findCollegeByName(userText, colleges) {
     userText = userText.toLowerCase();
 
-    return colleges.find(college =>
+    return const college = findCollegeByName(msg, collegesData);
+
+if (college) {
         userText.includes(college.name.toLowerCase().split(" ")[0]) ||
         userText.includes(college.name.toLowerCase())
     );
