@@ -8,6 +8,14 @@ fetch("Colleges.json")
   .catch(error => console.log(error));
 
 function sendMessage() {
+  function findCollegeByName(userText, colleges) {
+    userText = userText.toLowerCase();
+
+    return colleges.find(college =>
+        userText.includes(college.name.toLowerCase().split(" ")[0]) ||
+        userText.includes(college.name.toLowerCase())
+    );
+  }
   const input = document.getElementById("userInput");
   const userMessage = input.value.trim();
   if (userMessage === "") return;
