@@ -17,9 +17,9 @@
     <div class="title">
       <h1>College Guide Hub</h1>
       <p>
-  <span onclick="quickAsk('top colleges')" style="cursor:pointer">Find Colleges</span> • 
-  <span onclick="quickAsk('courses')" style="cursor:pointer">Courses</span> • 
-  <span onclick="quickAsk('admission')" style="cursor:pointer">Admission Help</span>
+        <span onclick="quickAsk('top colleges')" style="cursor:pointer">Find Colleges</span> • 
+        <span onclick="quickAsk('courses')" style="cursor:pointer">Courses</span> • 
+        <span onclick="quickAsk('admission')" style="cursor:pointer">Admission Help</span>
       </p>
     </div>
   </div>
@@ -28,41 +28,37 @@
 <div class="chat-container">
 
   <div class="chat-header">
-    College Enquiry Chatbot
-  </div>
-  <div class="chat-container">
-
-    <div class="chat-header">
-      🎓 College Enquiry Chatbot
-    </div>
-
-    <div id="chatBox" class="chat-box">
-      <div class="bot">
-        Hello 👋<br><br>
-        You can ask me about:<br>
-        • College fees (KCET / COMEDK / Management)<br>
-        • Hostel availability<br>
-        • Location (city)<br>
-        • Courses offered<br><br>
-        Example:<br>
-        <i>RV college fees</i><br>
-        <i>KCET fees PES</i><br>
-        <i>MSRIT hostel</i>
-      </div>
-    </div>
-
-    <div class="input-box">
-      <input
-        type="text"
-        id="userInput"
-        placeholder="Type your question here..."
-        onkeydown="if(event.key==='Enter'){sendMessage()}"
-      >
-      <button onclick="sendMessage()">Send</button>
-    </div>
-
+    🎓 College Enquiry Chatbot
   </div>
 
-  <script src="script.js"></script>
+  <div id="chatBox" class="chat-box">
+    <div class="bot">
+      Hello 👋<br><br>
+      You can ask me about:<br>
+      • College fees (KCET / COMEDK / Management)<br>
+      • Hostel availability<br>
+      • Location (city)<br>
+      • Courses offered<br><br>
+      Example:<br>
+      <i>RV college fees</i><br>
+      <i>KCET fees PES</i><br>
+      <i>MSRIT hostel</i>
+    </div>
+  </div>
+
+  <div class="input-box">
+    <input
+      type="text"
+      id="userInput"
+      placeholder="Type your question here..."
+      onkeydown="if(event.key==='Enter'){sendMessage()}"
+    >
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
