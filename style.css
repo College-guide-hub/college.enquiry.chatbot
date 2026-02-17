@@ -150,3 +150,63 @@ button:hover,
         max-width: 100%;
     }
 }
+/* ===== PROFESSIONAL LOOK UPGRADE FOR CURRENT DESIGN ===== */
+
+/* Body Professional Background */
+body {
+  background: linear-gradient(135deg, #2563EB, #0F172A);
+  min-height: 100vh;
+}
+
+/* Header Premium Look */
+header {
+  background: rgba(30, 60, 114, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  letter-spacing: 0.5px;
+}
+
+/* Search Box Upgrade */
+.search-box input {
+  border-radius: 14px;
+  border: none;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.15);
+  padding: 14px;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* Cards Layout Premium */
+.cards {
+  padding: 30px;
+}
+
+/* Individual Card Premium Look */
+.card {
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* Card Hover Animation */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Card Title Modern Color */
+.card h3 {
+  color: #2563EB;
+  font-weight: 600;
+}
+
+/* Mobile Polish */
+@media (max-width: 600px) {
+  .cards {
+    padding: 15px;
+  }
+  }
