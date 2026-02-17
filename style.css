@@ -210,3 +210,44 @@ header {
     padding: 15px;
   }
   }
+/* Sticky Premium Header */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(30, 60, 114, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  padding: 15px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: white;
+}
+
+.logo {
+  background: linear-gradient(135deg, #2563EB, #60A5FA);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.title h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.title p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
